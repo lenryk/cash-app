@@ -4,8 +4,12 @@ import Icon from "../Icon";
 
 const Test = styled.div`
   background-color: red;
+  border-radius: 10px;
+  border: 2px white solid;
   width: 170px;
   height: 50px;
+  color: white;
+  font-family: Agrandir, serif;
 `;
 
 const Container = styled.footer`
@@ -22,8 +26,8 @@ const ButtonsGroup = styled.div`
 const FooterLegalText = styled.p`
   color: white;
   max-width: 363px;
-  font-family: Arial, serif;
-  font-size: 0.75rem;
+  font-family: Mulish, serif;
+  font-size: 0.65rem;
 `;
 
 const SocialIcons = styled.div`
@@ -47,8 +51,14 @@ export default function Footer() {
   return (
     <Container>
       <ButtonsGroup>
-        <Test />
-        <Test />
+        <Test>
+          <Icon name="apple" />
+          APP STORE
+        </Test>
+        <Test>
+          <Icon name="playstore" />
+          GOOGLE PLAY
+        </Test>
       </ButtonsGroup>
       <RightSideContainer>
         <FooterLegalText>
