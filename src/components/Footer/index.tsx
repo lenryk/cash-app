@@ -1,16 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Icon from "../Icon";
-
-const Test = styled.div`
-  background-color: red;
-  border-radius: 10px;
-  border: 2px white solid;
-  width: 170px;
-  height: 50px;
-  color: white;
-  font-family: Agrandir, serif;
-`;
+import Button from "../../components/Button";
+import SocialIcons from "../../components/Footer/SocialIcons";
 
 const Container = styled.footer`
   display: flex;
@@ -21,18 +13,15 @@ const Container = styled.footer`
 const ButtonsGroup = styled.div`
   display: flex;
   gap: 20px;
+  height: fit-content;
 `;
 
 const FooterLegalText = styled.p`
   color: white;
-  max-width: 363px;
+  max-width: 364px;
   font-family: Mulish, serif;
-  font-size: 0.65rem;
-`;
-
-const SocialIcons = styled.div`
-  display: flex;
-  gap: 30px;
+  font-size: 10px;
+  line-height: 13px;
 `;
 
 // const Icon = styled.div`
@@ -47,19 +36,20 @@ const RightSideContainer = styled.div`
   gap: 30px;
 `;
 
-export default function Footer() {
+export default function Footer({ inverted = false }: { inverted?: boolean }) {
   return (
     <Container>
       <ButtonsGroup>
-        <Test>
+        <Button inverted={inverted}>
           <Icon name="apple" />
           APP STORE
-        </Test>
-        <Test>
+        </Button>
+        <Button inverted={inverted}>
           <Icon name="playstore" />
           GOOGLE PLAY
-        </Test>
+        </Button>
       </ButtonsGroup>
+      {!inverted && <Icon name="downArrow" height={30} width={18} />}
       <RightSideContainer>
         <FooterLegalText>
           Brokerage services by Cash App Investing LLC, member FINRA / SIPC. See
@@ -69,11 +59,7 @@ export default function Footer() {
           banking services through Sutton Bank and Lincoln Savings Bank, Members
           FDIC.
         </FooterLegalText>
-        <SocialIcons>
-          <Icon name="twitch" />
-          <Icon name="twitter" />
-          <Icon name="instagram" />
-        </SocialIcons>
+        <SocialIcons inverted={inverted} />
       </RightSideContainer>
     </Container>
   );

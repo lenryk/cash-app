@@ -1,22 +1,37 @@
 import React from "react";
-import Twitter from "../../../static/icons/twitter.svg";
-import Twitch from "../../../static/icons/twitch.svg";
-import Instagram from "../../../static/icons/instagram.svg";
-import Apple from "../../../static/icons/apple.svg";
-import Playstore from "../../../static/icons/playstore.svg";
+import styled from "styled-components";
 
-const iconMap = {
-  twitter: Twitter,
-  twitch: Twitch,
-  instagram: Instagram,
-  apple: Apple,
-  playstore: Playstore,
-};
+interface ImageProps {
+  inverted: boolean;
+}
 
-export default function Icon({ name }: { name: string }) {
+const Image = styled.img<ImageProps>`
+  filter: ${(props) =>
+    props.inverted
+      ? "invert(100%) sepia(0%) saturate(7463%) hue-rotate(38deg) brightness(130%) contrast(100%);"
+      : null};
+`;
+
+export default function Icon({
+  name,
+  height = 24,
+  width = 24,
+  inverted = false,
+}: {
+  name: string;
+  height?: number;
+  width?: number;
+  inverted?: boolean;
+}) {
   return (
     <>
-      <img src={iconMap[name]} alt={name} />
+      <Image
+        inverted={inverted}
+        src={`/icons/${name}.svg`}
+        width={width}
+        height={height}
+        alt={name}
+      />
     </>
   );
 }

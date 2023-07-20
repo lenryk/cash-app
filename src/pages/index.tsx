@@ -1,34 +1,20 @@
 import React from "react";
 import type { HeadFC } from "gatsby";
 import Footer from "../components/Footer";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
+import GlobalStyles from "../components/GlobalStyles";
 
 const Section = styled.section`
-  background-color: black;
-`;
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: blue;
-  }
-  
-  @font-face {
-    font-family: "Mulish";
-    src: url(/fonts/Mulish-Bold.woff2) format("woff2");
-  }
-
-  @font-face {
-    font-family: "Agrandir";
-    src: url(/fonts/Agrandir-WideHeavy.woff2) format("woff2");
-  }
+  //background-color: black;
 `;
 
 export default function IndexPage() {
   return (
     <main>
-      <GlobalStyle />
+      <GlobalStyles />
       <Section>
         <Footer />
+        {/*<Footer inverted />*/}
       </Section>
     </main>
   );
