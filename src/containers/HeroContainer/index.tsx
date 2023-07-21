@@ -1,0 +1,76 @@
+import NavMenu from "../../components/NavMenu";
+import Footer from "../../components/Footer";
+import Section from "../../components/Section";
+import React from "react";
+import styled from "styled-components";
+
+const Heading = styled.h1`
+  font-family: Agrandir, sans-serif;
+  font-size: 193px;
+  color: white;
+  width: fit-content;
+  line-height: 166px;
+  text-align: center;
+  align-self: center;
+  position: relative;
+`;
+
+interface ImgProps {
+  transX?: string;
+  transY?: string;
+  top?: string;
+  left?: string;
+  right?: string;
+  bottom?: string;
+  zIndex?: number;
+}
+
+const Img = styled.img<ImgProps>`
+  position: absolute;
+  transform: ${(props) => `translate(${props.transX}, ${props.transY})`};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  right: ${(props) => props.right};
+  bottom: ${(props) => props.bottom};
+`;
+
+const ZIndexWrapper = styled.span`
+  position: relative;
+  z-index: 20;
+`;
+
+export default function HeroContainer() {
+  return (
+    <Section color="black">
+      <NavMenu />
+      <Img
+        src="/images/hero/cashappLogo.svg"
+        alt="cashapp logo"
+        top="calc(7% - 44px)"
+        left="calc(5% - 30px)"
+      />
+      <Img
+        src="/images/hero/cube.svg"
+        alt="decorative cube"
+        transX="50%"
+        transY="50%"
+        top="calc(8% - 74px)"
+        left="calc(13% - 74px)"
+      />
+      <Heading>
+        CASH
+        <br />
+        <ZIndexWrapper>APP</ZIndexWrapper>
+      </Heading>
+      <Img
+        src="/images/hero/mobile.svg"
+        alt="mobile phone"
+        transX="50%"
+        transY="50%"
+        top="calc(50% - 453px)"
+        left="calc(50% - 370px)"
+      />
+      <Footer />
+    </Section>
+  );
+}

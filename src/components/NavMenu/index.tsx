@@ -7,6 +7,8 @@ const NavMenuWrapper = styled.nav`
   font-family: Agrandir, serif;
   color: white;
   justify-content: center;
+  position: relative;
+  z-index: 20;
 `;
 
 const NavLink = styled.a`

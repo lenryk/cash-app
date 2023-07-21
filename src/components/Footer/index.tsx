@@ -16,8 +16,9 @@ const ButtonsGroup = styled.div`
   height: fit-content;
 `;
 
-const FooterLegalText = styled.p`
-  color: white;
+const FooterLegalText = styled.p<{ inverted: boolean }>`
+  color: ${(props) =>
+    props.inverted ? props.theme.colors.black : props.theme.colors.white};
   max-width: 364px;
   font-family: Mulish, serif;
   font-size: 10px;
@@ -51,7 +52,7 @@ export default function Footer({ inverted = false }: { inverted?: boolean }) {
       </ButtonsGroup>
       {!inverted && <Icon name="downArrow" height={30} width={18} />}
       <RightSideContainer>
-        <FooterLegalText>
+        <FooterLegalText inverted={inverted}>
           Brokerage services by Cash App Investing LLC, member FINRA / SIPC. See
           our BrokerCheck. Investing involves risk; you may lose money. Bitcoin
           trading offered by Cash App. Cash App Investing does not trade bitcoin
