@@ -3,11 +3,20 @@ import styled from "styled-components";
 import Icon from "../Icon";
 import Button from "../../components/Button";
 import SocialIcons from "../../components/Footer/SocialIcons";
+import { devices } from "../../utils/breakpoints";
 
 const Container = styled.footer`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+
+  @media only screen and ${devices.lg} {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 `;
 
 const ButtonsGroup = styled.div`
@@ -25,16 +34,18 @@ const FooterLegalText = styled.p<{ inverted: boolean }>`
   line-height: 13px;
 `;
 
-// const Icon = styled.div`
-//   background-color: orange;
-//   height: 24px;
-//   width: 24px;
-// `;
-
 const RightSideContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
+`;
+
+const DownArrow = styled(Icon)`
+  display: none;
+
+  @media only screen and ${devices.lg} {
+    display: block;
+  }
 `;
 
 export default function Footer({ inverted = false }: { inverted?: boolean }) {
@@ -50,7 +61,7 @@ export default function Footer({ inverted = false }: { inverted?: boolean }) {
           GOOGLE PLAY
         </Button>
       </ButtonsGroup>
-      {!inverted && <Icon name="downArrow" height={30} width={18} />}
+      {!inverted && <DownArrow name="downArrow" height={30} width={18} />}
       <RightSideContainer>
         <FooterLegalText inverted={inverted}>
           Brokerage services by Cash App Investing LLC, member FINRA / SIPC. See
