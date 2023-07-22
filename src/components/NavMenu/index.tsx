@@ -56,7 +56,8 @@ const MobileHamburgerMenu = styled.img<{ visible: boolean }>`
   height: 24px;
   position: absolute;
   right: 0;
-  display: ${(props) => (props.visible ? "none" : "block")};
+  //display: ${(props) => (props.visible ? "none" : "block")};
+  cursor: pointer;
 
   @media only screen and ${devices.lg} {
     display: none;
@@ -64,11 +65,11 @@ const MobileHamburgerMenu = styled.img<{ visible: boolean }>`
 `;
 
 const MobileCloseMenu = styled.img`
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   position: absolute;
-  right: 34px;
-  top: 34px;
+  right: 26px;
+  top: 33px;
   cursor: pointer;
 `;
 

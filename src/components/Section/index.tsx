@@ -4,17 +4,28 @@ import React from "react";
 interface SectionProps {
   children: React.ReactNode;
   color?: string;
+  className?: string;
 }
 
 const SectionWrapper = styled.section<SectionProps>`
   background-color: ${(props) => props.theme.colors[props.color]};
-  height: calc(100vh - 68px);
+  min-height: 100%;
+  width: 100%;
   padding: 34px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 40px;
 `;
 
-export default function Section({ children, color = "white" }: SectionProps) {
-  return <SectionWrapper color={color}>{children}</SectionWrapper>;
+export default function Section({
+  children,
+  className,
+  color = "white",
+}: SectionProps) {
+  return (
+    <SectionWrapper className={className} color={color}>
+      {children}
+    </SectionWrapper>
+  );
 }
