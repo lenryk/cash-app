@@ -27,11 +27,19 @@ interface ImgProps {
 
 const Img = styled.img<ImgProps>`
   position: absolute;
-  transform: ${(props) => `translate(${props.transX}, ${props.transY})`};
+  transform: ${(props) =>
+    props.transX && props.transY
+      ? `translate(${props.transX}, ${props.transY})`
+      : null};
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   right: ${(props) => props.right};
   bottom: ${(props) => props.bottom};
+`;
+
+const NavMenuStyles = styled(NavMenu)`
+  position: relative;
+  z-index: 30;
 `;
 
 const ZIndexWrapper = styled.span`
@@ -42,7 +50,7 @@ const ZIndexWrapper = styled.span`
 export default function HeroContainer() {
   return (
     <Section color="black">
-      <NavMenu />
+      <NavMenuStyles />
       <Img
         src="/images/hero/cashappLogo.svg"
         alt="cashapp logo"

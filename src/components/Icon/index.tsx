@@ -14,6 +14,7 @@ const Image = styled.img<ImageProps>`
 
 export default function Icon({
   name,
+  className,
   height = 24,
   width = 24,
   inverted = false,
@@ -22,6 +23,7 @@ export default function Icon({
   height?: number;
   width?: number;
   inverted?: boolean;
+  className?: string;
 }) {
   return (
     <>
@@ -31,6 +33,7 @@ export default function Icon({
         width={width}
         height={height}
         alt={name}
+        className={className}
       />
     </>
   );

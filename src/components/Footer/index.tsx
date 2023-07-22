@@ -41,10 +41,13 @@ const RightSideContainer = styled.div`
 `;
 
 const DownArrow = styled(Icon)`
-  display: none;
+  order: -1;
+  flex-basis: 100%;
 
   @media only screen and ${devices.lg} {
     display: block;
+    order: unset;
+    flex-basis: unset;
   }
 `;
 

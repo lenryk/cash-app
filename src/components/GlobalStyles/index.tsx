@@ -54,6 +54,10 @@ const GlobalStyle = createGlobalStyle`
     border-spacing: 0;
   }
   
+  a:link {
+    color: unset;
+  }
+  
   @font-face {
     font-family: "Mulish";
     font-display: swap;
