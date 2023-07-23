@@ -16,6 +16,8 @@ const SectionWrapper = styled.section<SectionProps>`
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
+  position: relative;
+  overflow: hidden;
 `;
 
 export default function Section({

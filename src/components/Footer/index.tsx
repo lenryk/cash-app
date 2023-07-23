@@ -23,6 +23,7 @@ const ButtonsGroup = styled.div`
   display: flex;
   gap: 20px;
   height: fit-content;
+  z-index: 20;
 `;
 
 const FooterLegalText = styled.p<{ inverted: boolean }>`

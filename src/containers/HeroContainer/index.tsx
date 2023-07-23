@@ -31,6 +31,9 @@ interface ImgProps {
   right?: string;
   bottom?: string;
   zIndex?: number;
+  width?: string;
+  height?: string;
+  showOnMobile?: boolean;
 }
 
 const Img = styled.img<ImgProps>`
@@ -43,6 +46,13 @@ const Img = styled.img<ImgProps>`
   left: ${(props) => props.left};
   right: ${(props) => props.right};
   bottom: ${(props) => props.bottom};
+  max-width: ${(props) => props.width};
+  max-height: ${(props) => props.height};
+  display: ${({ showOnMobile = true }) => (showOnMobile ? "block" : "none")};
+
+  @media only screen and ${devices.lg} {
+    display: block;
+  }
 `;
 
 const NavMenuStyles = styled(NavMenu)`
@@ -70,8 +80,6 @@ const SectionStyles = styled(Section)`
 const MobileStyles = styled(Img)`
   width: calc((120% + 10vw) / 2);
   height: calc((130% + 60vw) / 2);
-  top: -85%;
-  left: -16%;
 
   @media only screen and ${devices.lg} {
     width: 100%;
@@ -88,16 +96,56 @@ export default function HeroContainer() {
       <Img
         src="/images/hero/cashappLogo.svg"
         alt="cashapp logo"
-        top="calc(7% - 44px)"
-        left="calc(5% - 30px)"
+        top="calc(7dvh - 44px)"
+        left="calc(4dvw - 30px)"
+        showOnMobile={false}
       />
       <Img
         src="/images/hero/cube.svg"
         alt="decorative cube"
         transX="50%"
         transY="50%"
-        top="calc(8% - 74px)"
-        left="calc(13% - 74px)"
+        top="calc(10dvh - 74px)"
+        left="calc(13dvw - 74px)"
+      />
+      <Img
+        src="/images/hero/eyeButton.svg"
+        alt="eye button"
+        transX="50%"
+        transY="50%"
+        top="calc(16dvh - 36px)"
+        right="calc((30dvw - 64px) /2)"
+      />
+      <Img
+        src="/images/hero/stairs.svg"
+        alt="eye button"
+        transX="50%"
+        transY="50%"
+        top="2%"
+        right="20%"
+        width="calc((5% + 30vw) / 2)"
+        showOnMobile={false}
+      />
+      <Img
+        src="/images/hero/rubixStairs.svg"
+        alt="eye button"
+        transX="50%"
+        transY="50%"
+        bottom="15%"
+        left="10%"
+        width="calc((15% + 40vw) / 2)"
+        showOnMobile={false}
+      />
+      <Img
+        src="/images/hero/pillar.svg"
+        alt="eye button"
+        transX="50%"
+        transY="50%"
+        bottom="30%"
+        left="-8dvw"
+        height="calc((15% + 40vw) / 2)"
+        width="calc((15% + 40vw) / 2)"
+        showOnMobile={false}
       />
       <Heading>
         CASH
@@ -107,6 +155,8 @@ export default function HeroContainer() {
           alt="mobile phone"
           transX="50%"
           transY="50%"
+          top="-85%"
+          left="-16%"
         />
         <ZIndexWrapper>APP</ZIndexWrapper>
       </Heading>
