@@ -27,8 +27,8 @@ const ButtonsGroup = styled.div`
 `;
 
 const FooterLegalText = styled.p<{ inverted: boolean }>`
-  color: ${(props) =>
-    props.inverted ? props.theme.colors.black : props.theme.colors.white};
+  color: ${({ inverted, theme }) =>
+    inverted ? theme.colors.black : theme.colors.white};
   max-width: 364px;
   font-family: Mulish, serif;
   font-weight: 700;

@@ -82,7 +82,7 @@ export default function HeroContainer() {
         alt="eye button"
         transX="50%"
         transY="50%"
-        top="calc(8dvh - 36px)"
+        top="calc(12dvh - 36px)"
         right="calc((30dvw - 64px) /2)"
       />
       <Image

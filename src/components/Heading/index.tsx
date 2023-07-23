@@ -11,9 +11,9 @@ const HeadingStyles = styled.h1<HeadingProps>`
 
 interface HeadingProps {
   children: React.ReactNode;
-  inverted?: boolean;
+  inverted: boolean;
 }
 
-export default function Heading({ children, inverted = false }: HeadingProps) {
+export default function Heading({ children, inverted }: HeadingProps) {
   return <HeadingStyles inverted={inverted}>{children}</HeadingStyles>;
 }
