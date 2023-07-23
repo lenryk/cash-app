@@ -84,7 +84,7 @@ const MobileStyles = styled(Img)`
   @media only screen and ${devices.lg} {
     width: 100%;
     height: 140%;
-    top: -85%;
+    top: -86%;
     left: -50%;
   }
 `;

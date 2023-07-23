@@ -58,6 +58,10 @@ const GlobalStyle = createGlobalStyle`
     color: unset;
   }
   
+  * {
+    box-sizing: border-box
+  }
+  
   @font-face {
     font-family: "Mulish";
     font-display: swap;

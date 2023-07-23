@@ -6,10 +6,10 @@ import GlobalStyles from "../components/GlobalStyles";
 import Section from "../components/Section";
 import { theme } from "../theme";
 import HeroContainer from "../containers/HeroContainer";
+import PaymentsContainer from "../containers/PaymentsContainer";
 
 const Main = styled.main`
-  height: calc(100dvh - 68px);
-  width: calc(100dvw - 68px);
+  height: 100dvh;
 `;
 
 export default function IndexPage() {
@@ -18,9 +18,7 @@ export default function IndexPage() {
       <GlobalStyles />
       <ThemeProvider theme={theme}>
         <HeroContainer />
-        {/*<Section>*/}
-        {/*  <h1>PAYMENTS</h1>*/}
-        {/*</Section>*/}
+        <PaymentsContainer />
         {/*<Section color="green">*/}
         {/*  <h1>BANKING</h1>*/}
         {/*</Section>*/}
