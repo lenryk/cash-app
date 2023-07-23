@@ -15,11 +15,7 @@ const Heading = styled.h1`
   text-align: center;
   align-self: center;
   position: relative;
-
-  //background-image: url("/images/hero/mobile.svg");
-  //background-position: center;
-  //background-repeat: no-repeat;
-  //background-size: contain;
+  margin-top: 10dvh;
 
   @media only screen and ${devices.lg} {
     font-size: 250px;
@@ -61,32 +57,29 @@ const ZIndexWrapper = styled.span`
 
 const SectionStyles = styled(Section)`
   background-image: url("/images/hero/rays.svg");
-  background-position: 50% -15vh;
+  background-position: 50% -10vh;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 120dvh 110dvh;
 
   @media only screen and ${devices.lg} {
-    //background-position: center;
-    background-position: 50% -8vh;
+    background-position: 50% 0;
+    background-size: cover;
   }
 `;
 
-//
-// const MobileStyles = styled(Img)`
-//
-//   // transform: ${(props) =>
-//   //   props.transX && props.transY
-//   //     ? `translate(${props.transX}, ${props.transY}) scale(calc(80%))`
-//   //     : null};
-//   //
-//   // @media only screen and ${devices.lg} {
-//   //   left: ${(props) => props.left};
-//   //   transform: ${(props) =>
-//   //     props.transX && props.transY
-//   //       ? `translate(${props.transX}, ${props.transY}) scale(130%)`
-//   //       : null};
-//   // }
-// `
+const MobileStyles = styled(Img)`
+  width: calc((120% + 10vw) / 2);
+  height: calc((130% + 60vw) / 2);
+  top: -85%;
+  left: -16%;
+
+  @media only screen and ${devices.lg} {
+    width: 100%;
+    height: 140%;
+    top: -85%;
+    left: -50%;
+  }
+`;
 
 export default function HeroContainer() {
   return (
@@ -109,13 +102,11 @@ export default function HeroContainer() {
       <Heading>
         CASH
         <br />
-        <Img
+        <MobileStyles
           src="/images/hero/mobile.svg"
           alt="mobile phone"
           transX="50%"
           transY="50%"
-          top="calc(50% - 454px)"
-          left="calc(50% - 370px)"
         />
         <ZIndexWrapper>APP</ZIndexWrapper>
       </Heading>
