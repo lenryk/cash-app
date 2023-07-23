@@ -4,9 +4,10 @@ import styled from "styled-components";
 interface ButtonProps {
   inverted: boolean;
   children: React.ReactNode;
+  href: string;
 }
 
-const ButtonWrapper = styled.div<ButtonProps>`
+const ButtonWrapper = styled.a<ButtonProps>`
   display: flex;
   background-color: ${(props) => (props.inverted ? "white" : "black")};
   justify-content: center;
@@ -21,8 +22,18 @@ const ButtonWrapper = styled.div<ButtonProps>`
   height: 50px;
   color: ${(props) => (props.inverted ? "black" : "white")};
   font-family: Agrandir, serif;
+  cursor: pointer;
+  text-decoration: none;
 `;
 
-export default function Button({ children, inverted = false }: ButtonProps) {
-  return <ButtonWrapper inverted={inverted}>{children}</ButtonWrapper>;
+export default function Button({
+  children,
+  href,
+  inverted = false,
+}: ButtonProps) {
+  return (
+    <ButtonWrapper inverted={inverted} href={href} target="_blank">
+      {children}
+    </ButtonWrapper>
+  );
 }

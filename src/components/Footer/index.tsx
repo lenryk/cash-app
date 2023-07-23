@@ -57,11 +57,17 @@ export default function Footer({ inverted = false }: { inverted?: boolean }) {
   return (
     <Container>
       <ButtonsGroup>
-        <Button inverted={inverted}>
+        <Button
+          inverted={inverted}
+          href="https://apps.apple.com/us/app/cash-app/id711923939"
+        >
           <Icon name="apple" />
           APP STORE
         </Button>
-        <Button inverted={inverted}>
+        <Button
+          inverted={inverted}
+          href="https://play.google.com/store/apps/details?id=com.squareup.cash&hl=en&gl=US"
+        >
           <Icon name="playstore" />
           GOOGLE PLAY
         </Button>
