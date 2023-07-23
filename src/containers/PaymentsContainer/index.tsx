@@ -18,7 +18,7 @@ const Subtext = styled.p`
 
 export default function PaymentsContainer() {
   return (
-    <Section>
+    <Section color="white">
       <TextWrapper>
         <Heading inverted>Payments</Heading>
         <Subtext>
