@@ -58,11 +58,15 @@ const GlobalStyle = createGlobalStyle`
     color: unset;
   }
   
+  * {
+    box-sizing: border-box
+  }
+  
   @font-face {
     font-family: "Mulish";
     font-display: swap;
-    src: url(/fonts/Mulish-Bold.woff2) format("woff2");
-    font-weight: 700;
+    src: url(/fonts/Mulish-Regular.woff2) format("woff2");
+    font-weight: 400;
     font-style: normal;
   }
 

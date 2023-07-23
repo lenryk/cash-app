@@ -31,6 +31,7 @@ const FooterLegalText = styled.p<{ inverted: boolean }>`
     props.inverted ? props.theme.colors.black : props.theme.colors.white};
   max-width: 364px;
   font-family: Mulish, serif;
+  font-weight: 700;
   font-size: 10px;
   line-height: 13px;
 `;

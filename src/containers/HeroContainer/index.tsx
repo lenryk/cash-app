@@ -4,6 +4,7 @@ import Section from "../../components/Section";
 import React from "react";
 import styled from "styled-components";
 import { devices } from "../../utils/breakpoints";
+import Image from "../../components/Image";
 
 const Heading = styled.h1`
   font-family: Agrandir, sans-serif;
@@ -20,38 +21,6 @@ const Heading = styled.h1`
   @media only screen and ${devices.lg} {
     font-size: 250px;
     line-height: 205px;
-  }
-`;
-
-interface ImgProps {
-  transX?: string;
-  transY?: string;
-  top?: string;
-  left?: string;
-  right?: string;
-  bottom?: string;
-  zIndex?: number;
-  width?: string;
-  height?: string;
-  showOnMobile?: boolean;
-}
-
-const Img = styled.img<ImgProps>`
-  position: absolute;
-  transform: ${(props) =>
-    props.transX && props.transY
-      ? `translate(${props.transX}, ${props.transY})`
-      : null};
-  top: ${(props) => props.top};
-  left: ${(props) => props.left};
-  right: ${(props) => props.right};
-  bottom: ${(props) => props.bottom};
-  max-width: ${(props) => props.width};
-  max-height: ${(props) => props.height};
-  display: ${({ showOnMobile = true }) => (showOnMobile ? "block" : "none")};
-
-  @media only screen and ${devices.lg} {
-    display: block;
   }
 `;
 
@@ -77,14 +46,14 @@ const SectionStyles = styled(Section)`
   }
 `;
 
-const MobileStyles = styled(Img)`
+const MobileStyles = styled(Image)`
   width: calc((120% + 10vw) / 2);
   height: calc((130% + 60vw) / 2);
 
   @media only screen and ${devices.lg} {
     width: 100%;
     height: 140%;
-    top: -85%;
+    top: -86%;
     left: -50%;
   }
 `;
@@ -93,14 +62,14 @@ export default function HeroContainer() {
   return (
     <SectionStyles color="black">
       <NavMenuStyles />
-      <Img
+      <Image
         src="/images/hero/cashappLogo.svg"
         alt="cashapp logo"
         top="calc(7dvh - 44px)"
         left="calc(4dvw - 30px)"
         showOnMobile={false}
       />
-      <Img
+      <Image
         src="/images/hero/cube.svg"
         alt="decorative cube"
         transX="50%"
@@ -108,15 +77,15 @@ export default function HeroContainer() {
         top="calc(10dvh - 74px)"
         left="calc(13dvw - 74px)"
       />
-      <Img
+      <Image
         src="/images/hero/eyeButton.svg"
         alt="eye button"
         transX="50%"
         transY="50%"
-        top="calc(16dvh - 36px)"
+        top="calc(8dvh - 36px)"
         right="calc((30dvw - 64px) /2)"
       />
-      <Img
+      <Image
         src="/images/hero/stairs.svg"
         alt="eye button"
         transX="50%"
@@ -126,7 +95,7 @@ export default function HeroContainer() {
         width="calc((5% + 30vw) / 2)"
         showOnMobile={false}
       />
-      <Img
+      <Image
         src="/images/hero/rubixStairs.svg"
         alt="eye button"
         transX="50%"
@@ -136,7 +105,7 @@ export default function HeroContainer() {
         width="calc((15% + 40vw) / 2)"
         showOnMobile={false}
       />
-      <Img
+      <Image
         src="/images/hero/pillar.svg"
         alt="eye button"
         transX="50%"
