@@ -76,15 +76,15 @@ const MobileCloseMenu = styled.img`
 export default function NavMenu({ className }: { className?: string }) {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
   const urls = {
-    "sign in": "https://google.com",
-    legal: "https://google.com",
-    licenses: "https://google.com",
-    security: "https://google.com",
-    careers: "https://google.com",
-    press: "https://google.com",
-    support: "https://google.com",
-    status: "https://google.com",
-    codeblog: "https://google.com",
+    "sign in": "https://cash.app/login",
+    legal: "https://cash.app/legal/us/en-us/tos",
+    licenses: "https://code.cash.app/gradle-dependency-license-validation",
+    security: "https://cash.app/security",
+    careers: "https://cash.app/careers",
+    press: "https://cash.app/press",
+    support: "https://cash.app/help",
+    status: "https://status.cash.app/",
+    codeblog: "https://code.cash.app/",
   };
 
   return (
