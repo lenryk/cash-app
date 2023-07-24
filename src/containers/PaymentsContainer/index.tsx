@@ -108,7 +108,7 @@ export default function PaymentsContainer() {
         <Image
           src={"/images/payments/column.svg"}
           alt="large column"
-          left="clamp(400px, 30%, 80%)"
+          left="clamp(400px, 30%, 900px)"
           bottom="-80px"
           showOnMobile={false}
           zIndex={10}
@@ -116,7 +116,7 @@ export default function PaymentsContainer() {
         <Image
           src={"/images/payments/pillar-medium.svg"}
           alt="large column"
-          left="clamp(600px, 40%, 50%)"
+          left="clamp(600px, 40%, 900px)"
           bottom="40px"
           showOnMobile={false}
           zIndex={10}
@@ -124,7 +124,7 @@ export default function PaymentsContainer() {
         <Image
           src={"/images/payments/pillar-medium.svg"}
           alt="large column"
-          left="clamp(700px, 45%, 60%)"
+          left="clamp(700px, 45%, 1100px)"
           bottom="-40px"
           showOnMobile={false}
           zIndex={10}
