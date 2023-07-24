@@ -31,19 +31,21 @@ const PositionWrapper = styled.div`
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  transform: translate(0px, calc(-20% + 5lvh));
+  z-index: 20;
 
   @media only screen and ${devices.lg} {
     flex-direction: row;
     align-self: center;
     flex-wrap: wrap;
-    transform: translate(-200px, 100px);
+    transform: translate(-200px, 50px);
   }
 `;
 
 const MobileStyles = styled.img`
   position: absolute;
-  top: 35lvh;
-  left: calc(55% - 400px);
+  top: 220px;
+  left: calc(55% - 350px);
 
   @media only screen and ${devices.lg} {
     top: 30px;
@@ -52,20 +54,28 @@ const MobileStyles = styled.img`
 `;
 
 const SectionStyles = styled(Section)`
-  background-image: url("/images/payments/floor.svg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  @media only screen and ${devices.lg} {
-    background-position: 0 520px;
-  }
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const ImagesStyles = styled.div`
-  @media only screen and (max-height: 800px) {
-    display: none;
+  background-image: url("/images/payments/floor.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: contain;
+  margin: -34px;
+
+  @media only screen and ${devices.lg} {
+    background-position: 0 100px;
+    display: flex;
+    gap: 10vw;
   }
+
+  @media only screen and ${devices["3xl"]} {
+    background-position: 0 100px;
+    display: flex;
+    gap: 15vw;
+  flex-grow: 1;
 `;
 
 export default function PaymentsContainer() {
@@ -82,66 +92,78 @@ export default function PaymentsContainer() {
         </TextWrapper>
         <MobileStyles src="/images/payments/mobile.svg" alt="mobile" />
       </PositionWrapper>
+
       <ImagesStyles>
         <Image
           src={"/images/payments/column.svg"}
           alt="large column"
           left="-600px"
-          bottom="-120px"
-          showOnMobile={false}
+          bottom="-210px"
+          zIndex={40}
+          relative
         />
         <Image
           src={"/images/payments/pillar-medium.svg"}
           alt="large column"
-          left="clamp(170px, 10%, 30%)"
-          bottom="40px"
+          left="-650px"
+          bottom="-120px"
           showOnMobile={false}
-          zIndex={10}
+          zIndex={30}
+          relative
         />
         <Image
           src={"/images/payments/pillar-small.svg"}
           alt="large column"
-          left="clamp(280px,15%,30%)"
-          bottom="70px"
+          left="-800px"
+          bottom="-130px"
+          zIndex={20}
           showOnMobile={false}
+          relative
         />
         <Image
           src={"/images/payments/column.svg"}
           alt="large column"
-          left="clamp(400px, 30%, 900px)"
-          bottom="-80px"
+          left="-1000px"
+          bottom="-130px"
           showOnMobile={false}
-          zIndex={10}
+          zIndex={30}
+          relative
         />
         <Image
           src={"/images/payments/pillar-medium.svg"}
           alt="large column"
-          left="clamp(600px, 40%, 900px)"
-          bottom="40px"
+          left="-1320px"
+          bottom="-5px"
           showOnMobile={false}
-          zIndex={10}
+          zIndex={20}
+          relative
         />
         <Image
           src={"/images/payments/pillar-medium.svg"}
           alt="large column"
-          left="clamp(700px, 45%, 1100px)"
-          bottom="-40px"
+          left="-2200px"
+          bottom="-100px"
           showOnMobile={false}
-          zIndex={10}
+          zIndex={30}
+          relative
         />
         <Image
           src={"/images/payments/pillar-medium.svg"}
           alt="large column"
-          left="clamp(1060px, 74%, 100%)"
-          bottom="165px"
+          left="-2350px"
+          bottom="-210px"
           showOnMobile={false}
+          zIndex={40}
+          relative
         />
         <Image
           src={"/images/payments/column.svg"}
           alt="large column"
-          left="clamp(1000px, 55%, 60%)"
-          bottom="20px"
+          right="2800px"
+          bottom="-20px"
           showOnMobile={false}
+          zIndex={20}
+          relative
         />
       </ImagesStyles>
     </SectionStyles>

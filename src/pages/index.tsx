@@ -7,6 +7,7 @@ import Section from "../components/Section";
 import { theme } from "../theme";
 import HeroContainer from "../containers/HeroContainer";
 import PaymentsContainer from "../containers/PaymentsContainer";
+import BankingContainer from "../containers/BankingContainer";
 
 const Main = styled.main`
   height: 100lvh;
@@ -19,9 +20,7 @@ export default function IndexPage() {
       <ThemeProvider theme={theme}>
         <HeroContainer />
         <PaymentsContainer />
-        <Section color="green">
-          <h1>BANKING</h1>
-        </Section>
+        <BankingContainer />
         <Section color="black">
           <h1>CASH CARD BOOST</h1>
         </Section>

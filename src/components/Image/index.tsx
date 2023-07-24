@@ -16,10 +16,11 @@ interface ImgProps {
   src: string;
   alt: string;
   className?: string;
+  relative?: boolean;
 }
 
 const Img = styled.img<ImgProps>`
-  position: absolute;
+  position: ${({ relative }) => (relative ? "relative" : "absolute")};
   transform: ${({ transX, transY }) =>
     transX && transY ? `translate(${transX}, ${transY})` : null};
   top: ${({ top }) => top};
@@ -50,6 +51,7 @@ export default function Image({
   alt,
   src,
   className,
+  relative = false,
 }: ImgProps) {
   return (
     <Img
@@ -66,6 +68,7 @@ export default function Image({
       showOnMobile={showOnMobile}
       alt={alt}
       className={className}
+      relative={relative}
     />
   );
 }

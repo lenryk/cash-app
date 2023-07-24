@@ -5,6 +5,7 @@ const breakpoints = {
   lg: "1024px",
   xl: "1280px",
   "2xl": "1536px",
+  "3xl": "2000px",
 };
 
 export const devices = {
@@ -14,4 +15,5 @@ export const devices = {
   lg: `(min-width: ${breakpoints.lg})`,
   xl: `(min-width: ${breakpoints.xl})`,
   "2xl": `(min-width: ${breakpoints["2xl"]})`,
+  "3xl": `(min-width: ${breakpoints["3xl"]})`,
 };

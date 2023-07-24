@@ -24,6 +24,8 @@ const ButtonsGroup = styled.div`
   gap: 20px;
   height: fit-content;
   z-index: 20;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const FooterLegalText = styled.p<{ inverted: boolean }>`
@@ -40,6 +42,8 @@ const RightSideContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const DownArrow = styled(Icon)`
