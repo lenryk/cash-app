@@ -20,17 +20,16 @@ interface ImgProps {
 
 const Img = styled.img<ImgProps>`
   position: absolute;
-  transform: ${(props) =>
-    props.transX && props.transY
-      ? `translate(${props.transX}, ${props.transY})`
-      : null};
-  top: ${(props) => props.top};
-  left: ${(props) => props.left};
-  right: ${(props) => props.right};
-  bottom: ${(props) => props.bottom};
-  max-width: ${(props) => props.width};
-  max-height: ${(props) => props.height};
+  transform: ${({ transX, transY }) =>
+    transX && transY ? `translate(${transX}, ${transY})` : null};
+  top: ${({ top }) => top};
+  left: ${({ left }) => left};
+  right: ${({ right }) => right};
+  bottom: ${({ bottom }) => bottom};
+  max-width: ${({ width }) => width};
+  max-height: ${({ height }) => height};
   display: ${({ showOnMobile = true }) => (showOnMobile ? "block" : "none")};
+  z-index: ${({ zIndex }) => zIndex};
 
   @media only screen and ${devices.lg} {
     display: block;

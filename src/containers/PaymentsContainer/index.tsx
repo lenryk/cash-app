@@ -76,6 +76,45 @@ export default function PaymentsContainer() {
         </TextWrapper>
         <MobileStyles src="/images/payments/mobile.svg" alt="mobile" />
       </PositionWrapper>
+      <div>
+        <Image
+          src={"/images/payments/column.svg"}
+          alt="large column"
+          left="-600px"
+          bottom="-120px"
+          showOnMobile={false}
+        />
+        <Image
+          src={"/images/payments/pillar-medium.svg"}
+          alt="large column"
+          left="170px"
+          bottom="40px"
+          showOnMobile={false}
+          zIndex={10}
+        />
+        <Image
+          src={"/images/payments/pillar-small.svg"}
+          alt="large column"
+          left="280px"
+          bottom="70px"
+          showOnMobile={false}
+        />
+        <Image
+          src={"/images/payments/column.svg"}
+          alt="large column"
+          left="500px"
+          bottom="-60px"
+          showOnMobile={false}
+        />
+        <Image
+          src={"/images/payments/pillar-medium.svg"}
+          alt="large column"
+          left="600px"
+          bottom="80px"
+          showOnMobile={false}
+          zIndex={10}
+        />
+      </div>
     </SectionStyles>
   );
 }
