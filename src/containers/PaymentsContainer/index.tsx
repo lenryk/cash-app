@@ -62,6 +62,12 @@ const SectionStyles = styled(Section)`
   }
 `;
 
+const ImagesStyles = styled.div`
+  @media only screen and (max-height: 800px) {
+    display: none;
+  }
+`;
+
 export default function PaymentsContainer() {
   return (
     <SectionStyles color="white">
@@ -76,7 +82,7 @@ export default function PaymentsContainer() {
         </TextWrapper>
         <MobileStyles src="/images/payments/mobile.svg" alt="mobile" />
       </PositionWrapper>
-      <div>
+      <ImagesStyles>
         <Image
           src={"/images/payments/column.svg"}
           alt="large column"
@@ -87,7 +93,7 @@ export default function PaymentsContainer() {
         <Image
           src={"/images/payments/pillar-medium.svg"}
           alt="large column"
-          left="170px"
+          left="clamp(170px, 10%, 30%)"
           bottom="40px"
           showOnMobile={false}
           zIndex={10}
@@ -95,26 +101,49 @@ export default function PaymentsContainer() {
         <Image
           src={"/images/payments/pillar-small.svg"}
           alt="large column"
-          left="280px"
+          left="clamp(280px,15%,30%)"
           bottom="70px"
           showOnMobile={false}
         />
         <Image
           src={"/images/payments/column.svg"}
           alt="large column"
-          left="500px"
-          bottom="-60px"
+          left="clamp(400px, 30%, 80%)"
+          bottom="-80px"
           showOnMobile={false}
+          zIndex={10}
         />
         <Image
           src={"/images/payments/pillar-medium.svg"}
           alt="large column"
-          left="600px"
-          bottom="80px"
+          left="clamp(600px, 40%, 50%)"
+          bottom="40px"
           showOnMobile={false}
           zIndex={10}
         />
-      </div>
+        <Image
+          src={"/images/payments/pillar-medium.svg"}
+          alt="large column"
+          left="clamp(700px, 45%, 60%)"
+          bottom="-40px"
+          showOnMobile={false}
+          zIndex={10}
+        />
+        <Image
+          src={"/images/payments/pillar-medium.svg"}
+          alt="large column"
+          left="clamp(1060px, 74%, 100%)"
+          bottom="165px"
+          showOnMobile={false}
+        />
+        <Image
+          src={"/images/payments/column.svg"}
+          alt="large column"
+          left="clamp(1000px, 55%, 60%)"
+          bottom="20px"
+          showOnMobile={false}
+        />
+      </ImagesStyles>
     </SectionStyles>
   );
 }
