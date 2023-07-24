@@ -9,7 +9,7 @@ import HeroContainer from "../containers/HeroContainer";
 import PaymentsContainer from "../containers/PaymentsContainer";
 
 const Main = styled.main`
-  height: 100dvh;
+  height: 100lvh;
 `;
 
 export default function IndexPage() {

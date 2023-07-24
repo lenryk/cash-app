@@ -11,7 +11,12 @@ const TextWrapper = styled.div`
   gap: 13px;
   max-width: 352px;
   height: 147px;
-  margin-top: 120px;
+  margin-top: 5lvh;
+  justify-content: center;
+
+  @media only screen and ${devices.lg} {
+    margin-top: 150px;
+  }
 `;
 
 const Subtext = styled.p<{ inverted: boolean }>`
@@ -25,35 +30,35 @@ const PositionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
 
   @media only screen and ${devices.lg} {
     flex-direction: row;
     align-self: center;
     flex-wrap: wrap;
-    transform: translate(100px, 0);
+    transform: translate(-200px, 100px);
   }
 `;
 
 const MobileStyles = styled.img`
-  position: relative;
+  position: absolute;
+  top: 35lvh;
+  left: calc(55% - 400px);
 
   @media only screen and ${devices.lg} {
-    left: -300px;
-    top: 50px;
+    top: 30px;
+    left: 25%;
   }
 `;
 
 const SectionStyles = styled(Section)`
   background-image: url("/images/payments/floor.svg");
-  background-position: 0 50%;
+  background-position: bottom;
   background-repeat: no-repeat;
-  //background-size: 120dvh 110dvh;
-  //background-size: contain;
-  //background-position: 0 60dvh;
+  background-size: contain;
 
   @media only screen and ${devices.lg} {
-    background-position: 0 68dvh;
-    background-size: contain;
+    background-position: 0 520px;
   }
 `;
 
