@@ -14,9 +14,15 @@ export default function SocialIcons({
 }) {
   return (
     <SocialIconsWrapper>
-      <Icon name="twitch" inverted={inverted} />
-      <Icon name="twitter" inverted={inverted} />
-      <Icon name="instagram" inverted={inverted} />
+      <a href="https://www.twitch.tv/cashapp" target="_blank">
+        <Icon name="twitch" inverted={inverted} />
+      </a>
+      <a href="https://twitter.com/CashApp" target="_blank">
+        <Icon name="twitter" inverted={inverted} />
+      </a>
+      <a href="https://www.instagram.com/cashapp/" target="_blank">
+        <Icon name="instagram" inverted={inverted} />
+      </a>
     </SocialIconsWrapper>
   );
 }

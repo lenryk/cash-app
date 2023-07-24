@@ -34,16 +34,8 @@ const PositionWrapper = styled.div`
   }
 `;
 
-const OuterPositionWrapper = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-`;
-
 const MobileStyles = styled.img`
   position: relative;
-  //width: 80%;
 
   @media only screen and ${devices.lg} {
     left: -300px;
@@ -51,9 +43,23 @@ const MobileStyles = styled.img`
   }
 `;
 
+const SectionStyles = styled(Section)`
+  background-image: url("/images/payments/floor.svg");
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  //background-size: 120dvh 110dvh;
+  //background-size: contain;
+  //background-position: 0 60dvh;
+
+  @media only screen and ${devices.lg} {
+    background-position: 0 68dvh;
+    background-size: contain;
+  }
+`;
+
 export default function PaymentsContainer() {
   return (
-    <Section color="white">
+    <SectionStyles color="white">
       <PositionWrapper>
         <TextWrapper>
           <Heading inverted>Payments</Heading>
@@ -65,6 +71,6 @@ export default function PaymentsContainer() {
         </TextWrapper>
         <MobileStyles src="/images/payments/mobile.svg" alt="mobile" />
       </PositionWrapper>
-    </Section>
+    </SectionStyles>
   );
 }
