@@ -29,10 +29,6 @@ const TextWrapper = styled.div`
   max-width: 348px;
   height: 147px;
   justify-content: center;
-
-  @media only screen and ${devices.lg} {
-    //margin-top: 150px;
-  }
 `;
 
 const Subtext = styled.p<{ inverted: boolean }>`
@@ -61,7 +57,7 @@ export default function BankingContainer() {
       <TopImagesWrapper>
         <Image
           src={"/images/banking/hole.svg"}
-          alt="large hole"
+          alt="large black hole"
           left="-100px"
           top="-34px"
           showOnMobile
@@ -79,7 +75,7 @@ export default function BankingContainer() {
         />
         <Image
           src={"/images/banking/track.svg"}
-          alt="large pillar"
+          alt="track piece"
           left="-300px"
           top="170px"
           showOnMobile={false}
@@ -88,7 +84,7 @@ export default function BankingContainer() {
         />
         <Image
           src={"/images/banking/ramp.svg"}
-          alt="large pillar"
+          alt="side ramp"
           left="-200px"
           top="250px"
           showOnMobile={false}
@@ -97,7 +93,7 @@ export default function BankingContainer() {
         />
         <Image
           src={"/images/banking/track-2.svg"}
-          alt="large pillar"
+          alt="track piece"
           left="-400px"
           top="100px"
           showOnMobile={false}
@@ -106,7 +102,7 @@ export default function BankingContainer() {
         />
         <Image
           src={"/images/banking/stairs.svg"}
-          alt="large pillar"
+          alt="stairs"
           left="-600px"
           top="400px"
           showOnMobile={false}
@@ -127,8 +123,7 @@ export default function BankingContainer() {
       <BottomImagesWrapper>
         <Image
           src={"/images/banking/stairs-ball.svg"}
-          alt="large hole"
-          left="0"
+          alt="stairs with a ball"
           bottom="100px"
           showOnMobile={false}
           zIndex={10}
@@ -137,7 +132,6 @@ export default function BankingContainer() {
         <Image
           src={"/images/banking/ramp-2.svg"}
           alt="large hole"
-          left="0px"
           bottom="20px"
           showOnMobile={false}
           zIndex={10}
@@ -145,7 +139,7 @@ export default function BankingContainer() {
         />
         <Image
           src={"/images/banking/tube.svg"}
-          alt="large hole"
+          alt="see through tube"
           left="50px"
           bottom="-80px"
           showOnMobile={false}
@@ -154,7 +148,7 @@ export default function BankingContainer() {
         />
         <Image
           src={"/images/banking/hole.svg"}
-          alt="large hole"
+          alt="large black hole"
           left="50px"
           bottom="-150px"
           showOnMobile={false}
@@ -163,7 +157,7 @@ export default function BankingContainer() {
         />
         <Image
           src={"/images/banking/cubes.svg"}
-          alt="large hole"
+          alt="rubix cube stairs"
           left="-350px"
           bottom="100px"
           showOnMobile={false}
@@ -172,7 +166,7 @@ export default function BankingContainer() {
         />
         <Image
           src={"/images/banking/monster.svg"}
-          alt="large hole"
+          alt="alien space monster"
           left="-350px"
           bottom="0px"
           showOnMobile={false}

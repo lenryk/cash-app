@@ -104,7 +104,7 @@ export default function PaymentsContainer() {
         />
         <Image
           src={"/images/payments/pillar-medium.svg"}
-          alt="large column"
+          alt="medium pillar"
           left="-650px"
           bottom="-120px"
           showOnMobile={false}
@@ -113,7 +113,7 @@ export default function PaymentsContainer() {
         />
         <Image
           src={"/images/payments/pillar-small.svg"}
-          alt="large column"
+          alt="small pillar"
           left="-800px"
           bottom="-130px"
           zIndex={20}
@@ -122,7 +122,7 @@ export default function PaymentsContainer() {
         />
         <Image
           src={"/images/payments/column.svg"}
-          alt="large column"
+          alt="column"
           left="-1000px"
           bottom="-130px"
           showOnMobile={false}
@@ -131,7 +131,7 @@ export default function PaymentsContainer() {
         />
         <Image
           src={"/images/payments/pillar-medium.svg"}
-          alt="large column"
+          alt="medium pillar"
           left="-1320px"
           bottom="-5px"
           showOnMobile={false}
@@ -140,7 +140,7 @@ export default function PaymentsContainer() {
         />
         <Image
           src={"/images/payments/pillar-medium.svg"}
-          alt="large column"
+          alt="medium pillar"
           left="-2200px"
           bottom="-100px"
           showOnMobile={false}
@@ -149,7 +149,7 @@ export default function PaymentsContainer() {
         />
         <Image
           src={"/images/payments/pillar-medium.svg"}
-          alt="large column"
+          alt="medium pillar"
           left="-2350px"
           bottom="-210px"
           showOnMobile={false}
