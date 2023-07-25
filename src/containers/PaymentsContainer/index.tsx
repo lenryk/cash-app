@@ -55,7 +55,7 @@ const MobileStyles = styled.img`
 
 const SectionStyles = styled(Section)`
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 `;
 
 const ImagesStyles = styled.div`
