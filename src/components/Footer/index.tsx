@@ -21,16 +21,20 @@ const Container = styled.footer`
 
 const ButtonsGroup = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 10px;
   height: fit-content;
   z-index: 20;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media only screen and ${devices.lg} {
+    gap: 20px;
+  }
 `;
 
 const FooterLegalText = styled.p<{ inverted: boolean }>`
   color: ${({ inverted, theme }) =>
-    inverted ? theme.colors.black : theme.colors.white};
+    inverted ? theme.colors.gray : theme.colors.white};
   max-width: 364px;
   font-family: Mulish, serif;
   font-weight: 700;

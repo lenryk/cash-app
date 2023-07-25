@@ -16,8 +16,10 @@ const ButtonWrapper = styled.a<ButtonProps>`
   font-size: 12px;
   line-height: 18px;
   border-radius: 10px;
-  border: ${({ inverted }) =>
-    inverted ? "2px black solid" : "2px white solid"};
+  border: ${({ inverted, theme }) =>
+    inverted
+      ? `1px ${theme.colors.black} solid`
+      : `1px ${theme.colors.white} solid`};
   width: 170px;
   gap: 3px;
   height: 50px;

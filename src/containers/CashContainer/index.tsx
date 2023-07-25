@@ -40,7 +40,6 @@ const PositionWrapper = styled.div`
   align-items: center;
   gap: 0;
   order: -1;
-  margin-top: 50px;
   position: relative;
 
   @media only screen and ${devices.lg} {
@@ -51,6 +50,7 @@ const PositionWrapper = styled.div`
     order: 0;
     flex-basis: 100px;
     bottom: 50px;
+    margin-top: 50px;
   }
 `;
 

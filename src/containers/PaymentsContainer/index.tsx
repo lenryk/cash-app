@@ -11,7 +11,6 @@ const TextWrapper = styled.div`
   gap: 13px;
   max-width: 352px;
   height: 147px;
-  margin-top: 5lvh;
   justify-content: center;
 
   @media only screen and ${devices.lg} {
@@ -44,7 +43,7 @@ const PositionWrapper = styled.div`
 
 const MobileStyles = styled.img`
   position: absolute;
-  top: 220px;
+  top: 180px;
   left: calc(55% - 350px);
 
   @media only screen and ${devices.lg} {
@@ -92,7 +91,6 @@ export default function PaymentsContainer() {
         </TextWrapper>
         <MobileStyles src="/images/payments/mobile.svg" alt="mobile" />
       </PositionWrapper>
-
       <ImagesStyles>
         <Image
           src={"/images/payments/column.svg"}

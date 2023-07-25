@@ -5,19 +5,13 @@ import Image from "../../components/Image";
 import Heading from "../../components/Heading";
 import { devices } from "../../utils/breakpoints";
 
-const TopImagesWrapper = styled.div`
-  display: flex;
-  gap: 10vw;
+const ImagesWrapper = styled.div`
+  display: none;
 
-  @media only screen and ${devices["3xl"]} {
+  @media only screen and ${devices.lg} {
     display: flex;
-    gap: 15vw;
+    gap: 10vw;
   }
-`;
-
-const BottomImagesWrapper = styled.div`
-  display: flex;
-  gap: 10vw;
 
   @media only screen and ${devices["3xl"]} {
     display: flex;
@@ -62,19 +56,29 @@ const PositionWrapper = styled.div`
 `;
 
 const SectionStyles = styled(Section)`
-  justify-content: space-evenly;
+  @media only screen and ${devices.lg} {
+    justify-content: space-evenly;
+  }
+`;
+
+const MobileOnlyAlien = styled(Image)`
+  position: absolute;
+
+  @media only screen and ${devices.lg} {
+    display: none;
+  }
 `;
 
 export default function BankingContainer() {
   return (
     <SectionStyles color="green">
-      <TopImagesWrapper>
+      <ImagesWrapper>
         <Image
           src={"/images/banking/hole.svg"}
           alt="large black hole"
           left="-100px"
-          top="-34px"
-          showOnMobile
+          top="-24px"
+          showOnMobile={false}
           zIndex={10}
           relative
         />
@@ -123,7 +127,7 @@ export default function BankingContainer() {
           zIndex={10}
           relative
         />
-      </TopImagesWrapper>
+      </ImagesWrapper>
       <PositionWrapper>
         <TextWrapper>
           <Heading color="white">Banking</Heading>
@@ -133,8 +137,17 @@ export default function BankingContainer() {
           </Subtext>
         </TextWrapper>
         <MobileStyles src="/images/banking/mobile.svg" alt="mobile" />
+        <MobileOnlyAlien
+          src={"/images/banking/monster.svg"}
+          alt="alien space monster"
+          right="0px"
+          bottom="-20px"
+          height="120px"
+          showOnMobile={true}
+          zIndex={30}
+        />
       </PositionWrapper>
-      <BottomImagesWrapper>
+      <ImagesWrapper>
         <Image
           src={"/images/banking/stairs-ball.svg"}
           alt="stairs with a ball"
@@ -188,7 +201,7 @@ export default function BankingContainer() {
           zIndex={10}
           relative
         />
-      </BottomImagesWrapper>
+      </ImagesWrapper>
     </SectionStyles>
   );
 }
