@@ -5,15 +5,14 @@ const HeadingStyles = styled.h1<HeadingProps>`
   font-family: Agrandir, sans-serif;
   font-size: 40px;
   line-height: 40px;
-  color: ${({ theme, inverted }) =>
-    inverted ? theme.colors.green : theme.colors.white};
+  color: ${({ theme, color = "black" }) => theme.colors[color]};
 `;
 
 interface HeadingProps {
   children: React.ReactNode;
-  inverted?: boolean;
+  color?: string;
 }
 
-export default function Heading({ children, inverted }: HeadingProps) {
-  return <HeadingStyles inverted={inverted}>{children}</HeadingStyles>;
+export default function Heading({ children, color }: HeadingProps) {
+  return <HeadingStyles color={color}>{children}</HeadingStyles>;
 }

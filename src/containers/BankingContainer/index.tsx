@@ -8,11 +8,21 @@ import { devices } from "../../utils/breakpoints";
 const TopImagesWrapper = styled.div`
   display: flex;
   gap: 10vw;
+
+  @media only screen and ${devices["3xl"]} {
+    display: flex;
+    gap: 15vw;
+  }
 `;
 
 const BottomImagesWrapper = styled.div`
   display: flex;
   gap: 10vw;
+
+  @media only screen and ${devices["3xl"]} {
+    display: flex;
+    gap: 15vw;
+  }
 `;
 
 const MobileStyles = styled(Image)`
@@ -51,9 +61,13 @@ const PositionWrapper = styled.div`
   }
 `;
 
+const SectionStyles = styled(Section)`
+  justify-content: space-evenly;
+`;
+
 export default function BankingContainer() {
   return (
-    <Section color="green">
+    <SectionStyles color="green">
       <TopImagesWrapper>
         <Image
           src={"/images/banking/hole.svg"}
@@ -112,7 +126,7 @@ export default function BankingContainer() {
       </TopImagesWrapper>
       <PositionWrapper>
         <TextWrapper>
-          <Heading>Banking</Heading>
+          <Heading color="white">Banking</Heading>
           <Subtext inverted>
             Receive your paycheck, tax returns, and other direct deposits up to
             two days early using your Cash App routing and account number.
@@ -169,11 +183,12 @@ export default function BankingContainer() {
           alt="alien space monster"
           left="-350px"
           bottom="0px"
+          height="100%"
           showOnMobile={false}
           zIndex={10}
           relative
         />
       </BottomImagesWrapper>
-    </Section>
+    </SectionStyles>
   );
 }

@@ -83,7 +83,7 @@ export default function PaymentsContainer() {
     <SectionStyles color="white">
       <PositionWrapper>
         <TextWrapper>
-          <Heading inverted>Payments</Heading>
+          <Heading color="green">Payments</Heading>
           <Subtext inverted>
             Send and receive money with anyone, donate to an important cause, or
             tip professionals. Just enter a $cashtag, phone number, or scan
