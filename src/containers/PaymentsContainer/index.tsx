@@ -54,18 +54,20 @@ const MobileStyles = styled.img`
 
 const SectionStyles = styled(Section)`
   flex-direction: column;
-  justify-content: space-evenly;
+  //justify-content: space-evenly;
 `;
 
 const ImagesStyles = styled.div`
   background-image: url("/images/payments/floor.svg");
-  background-position: bottom;
+  background-position: 0 clamp(200px, 70%, 470px);
   background-repeat: repeat-x;
   background-size: contain;
   margin: -34px;
+  
+  flex-grow: 1;
 
   @media only screen and ${devices.lg} {
-    background-position: 0 100px;
+    background-position: 0 50px;
     display: flex;
     gap: 10vw;
   }

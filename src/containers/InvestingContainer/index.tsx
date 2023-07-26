@@ -12,12 +12,11 @@ const PositionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  //margin-top: 20%;
   position: relative;
 
   @media only screen and ${devices.lg} {
     flex-direction: row;
-    gap: 80px;
+    gap: 60px;
   }
 `;
 
@@ -29,6 +28,7 @@ const TextWrapper = styled.div`
   max-height: 147px;
   justify-content: center;
   order: 0;
+  z-index: 10;
 
   @media only screen and ${devices.lg} {
     gap: 13px;
@@ -54,6 +54,8 @@ const HeroImageWrapper = styled.div`
 
   @media only screen and ${devices.lg} {
     gap: 80px;
+    margin-bottom: clamp(200px, 12%, 600px);
+    margin-top: auto;
   }
 `;
 
@@ -85,12 +87,15 @@ export default function InvestingContainer() {
             src="/images/investing/stocks-mobile.svg"
             alt="stocks mobile"
             relative
+            zIndex={10}
           />
+          <Image src="/images/investing/rays.svg" alt="rays" width="100%" />
           <Image
             src="/images/investing/bitcoin-mobile.svg"
             alt="bitcoin mobile"
             relative
             showOnMobile={false}
+            zIndex={10}
           />
           <TextWrapper>
             <Heading color="black" small>
@@ -103,6 +108,15 @@ export default function InvestingContainer() {
             </Subtext>
           </TextWrapper>
         </PositionWrapper>
+        <Image
+          src="/images/investing/floor-upscaled.jpeg"
+          alt="floor"
+          left="0"
+          bottom="0"
+          right="0"
+          width="clamp(2000px, 100%, 100%)"
+          showOnMobile={false}
+        />
       </HeroImageWrapper>
 
       <Footer inverted />

@@ -40,6 +40,7 @@ const FooterLegalText = styled.p<{ inverted: boolean }>`
   font-weight: 700;
   font-size: 10px;
   line-height: 13px;
+  z-index: 10;
 `;
 
 const RightSideContainer = styled.div`
