@@ -15,7 +15,7 @@ const MenuWrapper = styled.nav`
   display: flex;
   gap: 20px;
   font-family: Agrandir, serif;
-  color: white;
+  color: ${({ theme }) => theme.colors.white};
   justify-content: center;
   position: relative;
   z-index: 20;
@@ -24,11 +24,10 @@ const MenuWrapper = styled.nav`
 
 const MobileNavWrapper = styled.nav<{ visible: boolean }>`
   position: fixed;
-  display: ${(props) => (props.visible ? "flex" : "none")};
+  display: ${({ visible }) => (visible ? "flex" : "none")};
   flex-direction: column;
   gap: 15px;
-  // background-color: ${(props) => props.theme.colors.black};
-  background-color: red;
+  background-color: ${({ theme }) => theme.colors.black};
   padding: 34px;
   top: 0;
   left: 0;
@@ -43,7 +42,7 @@ const NavLink = styled.a`
   text-decoration: none;
   text-transform: uppercase;
   &:visited {
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -56,7 +55,6 @@ const MobileHamburgerMenu = styled.img<{ visible: boolean }>`
   height: 24px;
   position: absolute;
   right: 0;
-  //display: ${(props) => (props.visible ? "none" : "block")};
   cursor: pointer;
 
   @media only screen and ${devices.lg} {
@@ -68,7 +66,7 @@ const MobileCloseMenu = styled.img`
   width: 26px;
   height: 26px;
   position: absolute;
-  right: 26px;
+  right: 30px;
   top: 33px;
   cursor: pointer;
 `;

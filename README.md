@@ -1,49 +1,45 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+## Cash App Single Page Website
 
-## 🚀 Quick start
+![cash app cover image](https://raw.githubusercontent.com/lenryk/portfolio-website/main/public/assets/images/cash-app-project.jpg)
 
-1.  **Create a Gatsby site.**
+This website was built by me [@lenryk](https://github.com/lenryk) from the ground up using Gatsby, TypeScript & Styled Components.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+Although I built this website myself, I didn’t design it. The design for this website came from the Figma community by the user [@ogopedia](https://www.figma.com/@ogopedia).
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+>Pro Tip: You can find plenty of free community designs for websites and new projects on the [Figma community](https://www.figma.com/community)
 
-2.  **Start developing.**
+## FAQ
 
-    Navigate into your new site’s directory and start it up.
+### Why Gatsby?
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Gatsby was the first React framework I ever used for making websites and really opened my eyes to the advantages of serverside rendering (SSR) and static site generation (SSG).
 
-3.  **Open the code and start customizing!**
+Although it has fierce competition from Next.js nowadays, its recent acquisition by Netlify means there should a huge investment of dev works in the upcoming years.
 
-    Your site is now running at http://localhost:8000!
+### Why Styled Components?
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+Having used JSS for many years, in my eyes Styled Components has a much nicer API with string interpolation instead of having to type everything out like an object. It also has way less bugs and have a much larger community / dev force working behind the scenes.
 
-4.  **Learn more**
+### Can I use this for my own site?
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+I guess if you own cash app then sure... But not for your portfolio site :) 
 
-## 🚀 Quick start (Netlify)
+### Why do some screen sizes look funky?
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+Unfortunately the original figma designs only had desktop designs which made it pretty hard for me to adjust them for smaller (and larger) screen sizes.
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+In order to make it work and look relatively good, I had to make some slight adjustments to the layout, images and some icons.
+
+As I'm not a designer by trade this will most likely explain any funkiness.
+
+### How do I run this locally?
+
+```bash
+npm i
+npm run develop
+```
+Open `localhost:8000`
+
+### How long did it take to build?
+
+About a week of work with the majority of it spent battling with responsiveness and image positioning. Overall I'm much happier with the positioning and responsiveness compared to when I first started. Just setting every image to `absolute` and trying to position it on multiple breakpoint is not a good idea :)
