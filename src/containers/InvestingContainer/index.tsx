@@ -118,7 +118,22 @@ export default function InvestingContainer() {
           showOnMobile={false}
         />
       </HeroImageWrapper>
-
+      <Image
+        src="/images/investing/graph-left.svg"
+        alt="left graph"
+        bottom="150px"
+        left="-150px"
+        showOnMobile={false}
+        zIndex={10}
+      />
+      <Image
+        src="/images/investing/graph-right.svg"
+        alt="left graph"
+        bottom="270px"
+        right="-450px"
+        showOnMobile={false}
+        zIndex={10}
+      />
       <Footer inverted />
     </SectionStyles>
   );
