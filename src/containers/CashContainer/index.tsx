@@ -44,13 +44,8 @@ const PositionWrapper = styled.div`
 
   @media only screen and ${devices.lg} {
     flex-direction: row;
-    //flex-wrap: wrap;
-    gap: 0;
-    right: -500px;
-    order: 0;
-    flex-basis: 100px;
-    bottom: 50px;
-    margin-top: 50px;
+    transform: translate(-70px, 0);
+    z-index: 20;
   }
 `;
 
@@ -59,37 +54,14 @@ const SectionStyles = styled(Section)`
   flex-direction: row;
   gap: 0;
   justify-content: center;
-
-  @media only screen and ${devices.lg} {
-    justify-content: flex-end;
-  }
 `;
 
-const MainStairsStyles = styled(Image)`
-  align-self: flex-end;
-
-  @media only screen and ${devices["3xl"]} {
-    //height: 50vw;
-    //bottom: -200px;
-  }
-`;
-
-const LeftStairsStyles = styled(Image)`
-  //height: 75%;
-
-  @media only screen and ${devices.lg} {
-    //height: 60%;
-  }
-
-  @media only screen and ${devices["3xl"]} {
-    //height: 75%;
-  }
-`;
+const RightStairsWrapper = styled.div``;
 
 export default function CashContainer() {
   return (
     <SectionStyles color="black">
-      <LeftStairsStyles
+      <Image
         src="/images/cash/stairs-2.svg"
         alt="stairs 2"
         left="-50px"
@@ -107,49 +79,50 @@ export default function CashContainer() {
         </TextWrapper>
         <MobileStyles src="/images/cash/mobile.svg" alt="mobile" relative />
       </PositionWrapper>
-      <MainStairsStyles
-        src="/images/cash/stairs.svg"
-        alt="stairs"
-        right="-110px"
-        bottom="-100px"
-        // height="100%"
-        showOnMobile={false}
-      />
-      <Image
-        src="/images/cash/burger.svg"
-        alt="stairs"
-        right="470px"
-        bottom="310px"
-        showOnMobile={false}
-      />
-      <Image
-        src="/images/cash/coffee.svg"
-        alt="stairs"
-        right="370px"
-        bottom="160px"
-        showOnMobile={false}
-      />
-      <Image
-        src="/images/cash/shoe.svg"
-        alt="stairs"
-        right="70px"
-        bottom="310px"
-        showOnMobile={false}
-      />
-      <Image
-        src="/images/cash/card.svg"
-        alt="stairs"
-        right="360px"
-        bottom="450px"
-        showOnMobile={false}
-      />
-      <Image
-        src="/images/cash/hand.svg"
-        alt="stairs"
-        right="260px"
-        bottom="600px"
-        showOnMobile={false}
-      />
+      <RightStairsWrapper>
+        <Image
+          src="/images/cash/stairs.svg"
+          alt="stairs"
+          right="-110px"
+          bottom="-100px"
+          showOnMobile={false}
+        />
+        <Image
+          src="/images/cash/burger.svg"
+          alt="stairs"
+          right="420px"
+          bottom="310px"
+          showOnMobile={false}
+        />
+        <Image
+          src="/images/cash/coffee.svg"
+          alt="stairs"
+          right="320px"
+          bottom="160px"
+          showOnMobile={false}
+        />
+        <Image
+          src="/images/cash/shoe.svg"
+          alt="stairs"
+          right="30px"
+          bottom="310px"
+          showOnMobile={false}
+        />
+        <Image
+          src="/images/cash/card.svg"
+          alt="stairs"
+          right="320px"
+          bottom="450px"
+          showOnMobile={false}
+        />
+        <Image
+          src="/images/cash/hand.svg"
+          alt="stairs"
+          right="220px"
+          bottom="600px"
+          showOnMobile={false}
+        />
+      </RightStairsWrapper>
     </SectionStyles>
   );
 }

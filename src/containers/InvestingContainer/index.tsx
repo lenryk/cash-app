@@ -129,8 +129,8 @@ export default function InvestingContainer() {
       <Image
         src="/images/investing/graph-right.svg"
         alt="left graph"
-        bottom="270px"
-        right="-450px"
+        bottom="330px"
+        right="-600px"
         showOnMobile={false}
         zIndex={10}
       />
